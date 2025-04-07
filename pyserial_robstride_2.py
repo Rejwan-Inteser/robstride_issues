@@ -17,7 +17,7 @@ if ser.is_open:
     send_at_command("AT")            # Test communication
     send_at_command("AT+INFO")       # Device information
     send_at_command("AT+CANOPEN")    # Initialize CAN
-    send_at_command("AT+CANSEND=001#11223344")  # Send standard CAN frame
+    send_at_command("AT+CANSEND=0300FD01#0000000000000000")  # Send standard CAN frame
     send_at_command("AT+CANCLOSE")   # Close CAN communication
 
     ser.close()
